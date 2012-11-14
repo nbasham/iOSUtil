@@ -9,11 +9,9 @@ EXAMPLE:
 
     NSArray* bands = [DelimetedFile loadTSV:@"data.tsv" toClass:[Band class]];
     NSLog(@"%@", [bands description]);
-
-2012-11-14 07:56:55.258 iOSUtil[82697:c07] (
+    Console output:
     "1 Crazy Horse: Billy Pancho Ralph Neil Danny",
     "2 The Band: Rick Levon Garth Richard Robbie Jim Stan Randy Richard"
-)
 
 --- data.tsv
 1	Crazy Horse	Billy,Pancho,Ralph,Neil,Danny
