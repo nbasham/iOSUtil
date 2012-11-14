@@ -1,9 +1,8 @@
 iOSUtil
 =======
+	 • DelimetedFile
 
-iOS Utilities - currently only one utility exists: DelimetedFile
-
-DelimetedFile - creates an array of objects from a tab or separated file. 
+DelimetedFile - creates an array of objects from a tab or comma separated file. 
 
 <b>Example:</b> Given a class Band (full example in sample project):
 
@@ -13,7 +12,7 @@ DelimetedFile - creates an array of objects from a tab or separated file.
 	@property(nonatomic, strong)NSString* name;
 	@property(nonatomic, strong)NSArray* members;
 
-Tab separated file:
+And the tab separated file named "data.tsv":
 <table>
     <tr>
         <td>1</td>
@@ -31,3 +30,4 @@ Code: creates an array of Band objects from the file above:
 
     NSArray* bands = [DelimetedFile loadTSV:@"data.tsv" toClass:[Band class]];
 
+Similarly, you can do the same with comma separated (CSV) files (see sample project). Adding one method will allow use of any delimiter.
