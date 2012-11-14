@@ -1,1 +1,1 @@
-Hi there
+iOSUtil.xcodeproj gives an example of objects being loaded from and tab and comma separated files. The code is called from didFinishLaunchingWithOptions in AppDelegate.m. The objects are loaded and then displayed in the console. 
