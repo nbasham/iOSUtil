@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5785D5BD165418EA003CB0E9 /* DelimitedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5BC165418EA003CB0E9 /* DelimitedFile.m */; };
 		57C4913E16532184004BCFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913D16532184004BCFA7 /* UIKit.framework */; };
 		57C4914016532184004BCFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913F16532184004BCFA7 /* Foundation.framework */; };
 		57C4914216532184004BCFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4914116532184004BCFA7 /* CoreGraphics.framework */; };
@@ -22,11 +23,12 @@
 		57C491A916532C68004BCFA7 /* Band.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C491A216532C68004BCFA7 /* Band.m */; };
 		57C491AA16532C68004BCFA7 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 57C491A316532C68004BCFA7 /* data.csv */; };
 		57C491AB16532C68004BCFA7 /* data.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 57C491A416532C68004BCFA7 /* data.tsv */; };
-		57C491AC16532C68004BCFA7 /* DelimetedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C491A616532C68004BCFA7 /* DelimetedFile.m */; };
 		57C491AD16532C68004BCFA7 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C491A816532C68004BCFA7 /* State.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5785D5BB165418EA003CB0E9 /* DelimitedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimitedFile.h; sourceTree = "<group>"; };
+		5785D5BC165418EA003CB0E9 /* DelimitedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimitedFile.m; sourceTree = "<group>"; };
 		57C4913916532184004BCFA7 /* iOSUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C4913D16532184004BCFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57C4913F16532184004BCFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,8 +50,6 @@
 		57C491A216532C68004BCFA7 /* Band.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Band.m; sourceTree = "<group>"; };
 		57C491A316532C68004BCFA7 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 		57C491A416532C68004BCFA7 /* data.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.tsv; sourceTree = "<group>"; };
-		57C491A516532C68004BCFA7 /* DelimetedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelimetedFile.h; sourceTree = "<group>"; };
-		57C491A616532C68004BCFA7 /* DelimetedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelimetedFile.m; sourceTree = "<group>"; };
 		57C491A716532C68004BCFA7 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
 		57C491A816532C68004BCFA7 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,12 +135,12 @@
 		57C491A016532C68004BCFA7 /* delimetedFileExample */ = {
 			isa = PBXGroup;
 			children = (
+				5785D5BB165418EA003CB0E9 /* DelimitedFile.h */,
+				5785D5BC165418EA003CB0E9 /* DelimitedFile.m */,
 				57C491A116532C68004BCFA7 /* Band.h */,
 				57C491A216532C68004BCFA7 /* Band.m */,
 				57C491A316532C68004BCFA7 /* data.csv */,
 				57C491A416532C68004BCFA7 /* data.tsv */,
-				57C491A516532C68004BCFA7 /* DelimetedFile.h */,
-				57C491A616532C68004BCFA7 /* DelimetedFile.m */,
 				57C491A716532C68004BCFA7 /* State.h */,
 				57C491A816532C68004BCFA7 /* State.m */,
 			);
@@ -220,8 +220,8 @@
 				57C4917316532264004BCFA7 /* main.m in Sources */,
 				57C4917416532264004BCFA7 /* ViewController.m in Sources */,
 				57C491A916532C68004BCFA7 /* Band.m in Sources */,
-				57C491AC16532C68004BCFA7 /* DelimetedFile.m in Sources */,
 				57C491AD16532C68004BCFA7 /* State.m in Sources */,
+				5785D5BD165418EA003CB0E9 /* DelimitedFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,17 +3,17 @@
 //  Copyright (c) 2012 Norman Basham. All rights reserved.
 //
 
-#import "DelimetedFile.h"
+#import "DelimitedFile.h"
 #import <objc/runtime.h>
 
-@implementation DelimetedFile
+@implementation DelimitedFile
 
 +(NSArray*)loadCSV:(NSString*)fileName toClass:(Class)c {
     BOOL conformsToProtocol = [c conformsToProtocol:@protocol(CommaSeparatedFileDelegate)];
     if(!conformsToProtocol) {
         @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Class parameter must conform to protocol: CommaSeparatedFileDelegate" userInfo:nil];
     }
-    return [DelimetedFile _load:fileName toClass:c delimeter:@","];
+    return [DelimitedFile _load:fileName toClass:c delimeter:@","];
 }
 
 +(NSArray*)loadTSV:(NSString*)fileName toClass:(Class)c {
@@ -21,7 +21,7 @@
     if(!conformsToProtocol) {
         @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Class parameter must conform to protocol: TabSeparatedFileDelegate" userInfo:nil];
     }
-    return [DelimetedFile _load:fileName toClass:c delimeter:@"\t"];
+    return [DelimitedFile _load:fileName toClass:c delimeter:@"\t"];
 }
 
 +(NSArray*)_load:(NSString*)fileName toClass:(Class)c delimeter:(NSString*)delimeter {
@@ -38,7 +38,7 @@
             continue;
         }
         NSArray* lineChunks = [s componentsSeparatedByString: delimeter];
-        id<AbstractDelimetedFileDelegate> o = [[c alloc] init];
+        id<AbstractDelimitedFileDelegate> o = [[c alloc] init];
         @try {
             [o fromValues:lineChunks];
         }

@@ -1,14 +1,14 @@
 #import "AppDelegate.h"
-#import "DelimetedFile.h"
+#import "DelimitedFile.h"
 #import "Band.h"
 #import "State.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSArray* bands = [DelimetedFile loadTSV:@"data.tsv" toClass:[Band class]];
+    NSArray* bands = [DelimitedFile loadTSV:@"data.tsv" toClass:[Band class]];
     NSLog(@"%@", [bands description]);
-    NSArray* states = [DelimetedFile loadCSV:@"data.csv" toClass:[State class]];
+    NSArray* states = [DelimitedFile loadCSV:@"data.csv" toClass:[State class]];
     NSLog(@"%@", [states description]);
     return YES;
 }

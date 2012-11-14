@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "DelimetedFile.h"
+#import "DelimitedFile.h"
 
 @interface Band : NSObject<TabSeparatedFileDelegate>
 

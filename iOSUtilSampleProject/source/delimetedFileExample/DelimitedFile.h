@@ -5,17 +5,17 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol AbstractDelimetedFileDelegate <NSObject>
+@protocol AbstractDelimitedFileDelegate <NSObject>
 -(id)fromValues:(NSArray*)tsv;
 @end
 
-@protocol TabSeparatedFileDelegate <AbstractDelimetedFileDelegate>
+@protocol TabSeparatedFileDelegate <AbstractDelimitedFileDelegate>
 @end
 
-@protocol CommaSeparatedFileDelegate <AbstractDelimetedFileDelegate>
+@protocol CommaSeparatedFileDelegate <AbstractDelimitedFileDelegate>
 @end
 
-@interface DelimetedFile : NSObject
+@interface DelimitedFile : NSObject
 
 +(NSArray*)loadCSV:(NSString*)fileName toClass:(Class)c;
 +(NSArray*)loadTSV:(NSString*)fileName toClass:(Class)c;
