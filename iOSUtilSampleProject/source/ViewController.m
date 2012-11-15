@@ -21,12 +21,12 @@
 }
 
 - (IBAction)emailScreenshotTouch:(id)sender {
-    UIImage* screenshotImage = [CaptureView viewToImage:self.view];
     emailController = [[EmailController alloc] init];
-    [emailController attachImage:screenshotImage];
     emailController.subject = @"Image example";
     emailController.isHTML = NO;
     emailController.body = @"Enclosed is an image.";
+    UIImage* screenshotImage = [CaptureView viewToImage:self.view];
+    [emailController attachImage:screenshotImage];
     [emailController addRecipient:@"steve@mac.com"];
     [emailController sendEmail:self];
 }

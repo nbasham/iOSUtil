@@ -54,17 +54,18 @@ iOSUtil
 
 > <b>Example 1:</b> The snippet below displays Apple's mail composer
 > 
+>     emailController = [[EmailController alloc] init];
 >     [emailController sendEmail:self];
 > 
 > <b>Example 2:</b> The snippet below emails a screenshot of the current UIViewController
 > 
->     UIImage* screenshotImage = [CaptureView viewToImage:self.view];
 >     emailController = [[EmailController alloc] init];
->     [emailController attachImage:screenshotImage];
 >     emailController.attachmentName = @"screenshot.png";
 >     emailController.subject = @"Image example";
 >     emailController.isHTML = NO;
 >     emailController.body = @"Enclosed is an image.";
+>     UIImage* screenshotImage = [CaptureView viewToImage:self.view];
+>     [emailController attachImage:screenshotImage];
 >     [emailController addRecipient:@"steve@mac.com"];
 >     [emailController sendEmail:self];
 > 
