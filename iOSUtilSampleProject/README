@@ -1,3 +1,0 @@
-The iOSUtil project gives an example of user defined objects being loaded from and tab and
-comma separated files. The code is called from didFinishLaunchingWithOptions in
-AppDelegate.m. The objects are then displayed in the console. 

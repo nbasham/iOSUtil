@@ -1,29 +1,34 @@
-//
-//  ViewController.m
-//  iOSUtil
-//
-//  Created by Norman Basham iMac on 11/13/12.
-//  Copyright (c) 2012 iSolace. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "CaptureView.h"
+#import "EmailController.h"
 
-@interface ViewController ()
-
+@interface ViewController () {
+    EmailController* emailController;
+}
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (IBAction)emailPdfTouch:(id)sender {
+    NSData* pdfData = [CaptureView viewToPdf:self.view];
+    emailController = [[EmailController alloc] init];
+    emailController.attachment = pdfData;
+    emailController.attachmentName = @"screenshot.pdf";
+    emailController.mimeType = @"application/pdf";
+    emailController.subject = @"PDF example";
+    emailController.body = @"Enclosed is a <b>PDF!<b/>";    //  body defaults to HTML
+    [emailController sendEmail:self];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)emailScreenshotTouch:(id)sender {
+    UIImage* screenshotImage = [CaptureView viewToImage:self.view];
+    emailController = [[EmailController alloc] init];
+    [emailController attachImage:screenshotImage];
+    emailController.subject = @"Image example";
+    emailController.isHTML = NO;
+    emailController.body = @"Enclosed is an image.";
+    [emailController addRecipient:@"steve@mac.com"];
+    [emailController sendEmail:self];
 }
 
 @end

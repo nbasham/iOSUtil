@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5785D5C0165419F3003CB0E9 /* DelimitedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5BF165419F3003CB0E9 /* DelimitedFile.m */; };
+		5785D5D1165484AE003CB0E9 /* crazyHorse.png in Resources */ = {isa = PBXBuildFile; fileRef = 5785D5CF165484AE003CB0E9 /* crazyHorse.png */; };
+		5785D5D2165484AE003CB0E9 /* theBand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5785D5D0165484AE003CB0E9 /* theBand.jpg */; };
+		5785D5D716554113003CB0E9 /* CaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5D616554113003CB0E9 /* CaptureView.m */; };
+		5785D5DA1655413F003CB0E9 /* EmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5D91655413F003CB0E9 /* EmailController.m */; };
+		5785D5DC1655427C003CB0E9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5785D5DB1655427C003CB0E9 /* MessageUI.framework */; };
 		57C4913E16532184004BCFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913D16532184004BCFA7 /* UIKit.framework */; };
 		57C4914016532184004BCFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913F16532184004BCFA7 /* Foundation.framework */; };
 		57C4914216532184004BCFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4914116532184004BCFA7 /* CoreGraphics.framework */; };
@@ -29,6 +34,13 @@
 /* Begin PBXFileReference section */
 		5785D5BE165419F3003CB0E9 /* DelimitedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DelimitedFile.h; path = ../../../DelimitedFile.h; sourceTree = "<group>"; };
 		5785D5BF165419F3003CB0E9 /* DelimitedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DelimitedFile.m; path = ../../../DelimitedFile.m; sourceTree = "<group>"; };
+		5785D5CF165484AE003CB0E9 /* crazyHorse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crazyHorse.png; sourceTree = "<group>"; };
+		5785D5D0165484AE003CB0E9 /* theBand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theBand.jpg; sourceTree = "<group>"; };
+		5785D5D516554113003CB0E9 /* CaptureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaptureView.h; path = ../../CaptureView.h; sourceTree = "<group>"; };
+		5785D5D616554113003CB0E9 /* CaptureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaptureView.m; path = ../../CaptureView.m; sourceTree = "<group>"; };
+		5785D5D81655413F003CB0E9 /* EmailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailController.h; path = ../../EmailController.h; sourceTree = "<group>"; };
+		5785D5D91655413F003CB0E9 /* EmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailController.m; path = ../../EmailController.m; sourceTree = "<group>"; };
+		5785D5DB1655427C003CB0E9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		57C4913916532184004BCFA7 /* iOSUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C4913D16532184004BCFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57C4913F16532184004BCFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5785D5DC1655427C003CB0E9 /* MessageUI.framework in Frameworks */,
 				57C4913E16532184004BCFA7 /* UIKit.framework in Frameworks */,
 				57C4914016532184004BCFA7 /* Foundation.framework in Frameworks */,
 				57C4914216532184004BCFA7 /* CoreGraphics.framework in Frameworks */,
@@ -68,9 +81,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5785D5CE165484AE003CB0E9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5785D5CF165484AE003CB0E9 /* crazyHorse.png */,
+				5785D5D0165484AE003CB0E9 /* theBand.jpg */,
+			);
+			path = images;
+			sourceTree = SOURCE_ROOT;
+		};
+		5785D5D3165540BA003CB0E9 /* emailExample */ = {
+			isa = PBXGroup;
+			children = (
+				5785D5D81655413F003CB0E9 /* EmailController.h */,
+				5785D5D91655413F003CB0E9 /* EmailController.m */,
+			);
+			name = emailExample;
+			sourceTree = "<group>";
+		};
+		5785D5D4165540D9003CB0E9 /* captureView */ = {
+			isa = PBXGroup;
+			children = (
+				5785D5D516554113003CB0E9 /* CaptureView.h */,
+				5785D5D616554113003CB0E9 /* CaptureView.m */,
+			);
+			name = captureView;
+			path = ../images;
+			sourceTree = "<group>";
+		};
 		57C4912E16532184004BCFA7 = {
 			isa = PBXGroup;
 			children = (
+				5785D5DB1655427C003CB0E9 /* MessageUI.framework */,
 				57C4914316532184004BCFA7 /* iOSUtil */,
 				57C4913C16532184004BCFA7 /* Frameworks */,
 				57C4913A16532184004BCFA7 /* Products */,
@@ -98,6 +140,7 @@
 		57C4914316532184004BCFA7 /* iOSUtil */ = {
 			isa = PBXGroup;
 			children = (
+				5785D5CE165484AE003CB0E9 /* images */,
 				57C4916316532264004BCFA7 /* source */,
 				57C4916A16532264004BCFA7 /* support */,
 			);
@@ -107,7 +150,9 @@
 		57C4916316532264004BCFA7 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				5785D5D4165540D9003CB0E9 /* captureView */,
 				57C491A016532C68004BCFA7 /* delimetedFileExample */,
+				5785D5D3165540BA003CB0E9 /* emailExample */,
 				57C4916416532264004BCFA7 /* AppDelegate.h */,
 				57C4916516532264004BCFA7 /* AppDelegate.m */,
 				57C4916616532264004BCFA7 /* iOSUtil-Prefix.pch */,
@@ -206,6 +251,8 @@
 				57C4917B16532264004BCFA7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				57C491AA16532C68004BCFA7 /* data.csv in Resources */,
 				57C491AB16532C68004BCFA7 /* data.tsv in Resources */,
+				5785D5D1165484AE003CB0E9 /* crazyHorse.png in Resources */,
+				5785D5D2165484AE003CB0E9 /* theBand.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +269,8 @@
 				57C491A916532C68004BCFA7 /* Band.m in Sources */,
 				57C491AD16532C68004BCFA7 /* State.m in Sources */,
 				5785D5C0165419F3003CB0E9 /* DelimitedFile.m in Sources */,
+				5785D5D716554113003CB0E9 /* CaptureView.m in Sources */,
+				5785D5DA1655413F003CB0E9 /* EmailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
