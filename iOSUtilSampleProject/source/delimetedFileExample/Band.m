@@ -1,7 +1,7 @@
 #import "Band.h"
 
 @implementation Band
-//  
+
 -(void)fromValues:(NSArray*)tsv {
     self.uid = [[tsv objectAtIndex:0] intValue];
     self.name = [tsv objectAtIndex:1];

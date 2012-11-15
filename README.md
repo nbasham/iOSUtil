@@ -13,15 +13,26 @@ iOSUtil
 
 <h2><b>DelimitedFile</b></h2> 
 
-> <b>Example:</b> Given a class Band (full example in sample project):
+> <b>Example:</b> Creates an array of user defined objects populated with a tab separated file, in this example Band objects are created from file "data.tsv":
 > 
-> 	@interface Band : NSObject<TabSeparatedFileDelegate>
-> 	
-> 	@property(nonatomic, assign)int uid;
-> 	@property(nonatomic, strong)NSString* name;
-> 	@property(nonatomic, strong)NSArray* members;
+>     NSArray* bands = [DelimitedFileDelimitedFile loadTSV:@"data.tsv" toClass:[Band class]];
 > 
-> And the tab separated file named "data.tsv":
+> <b>Band.h</b>
+
+> 		@interface Band : NSObject<TabSeparatedFileDelegate>
+> 		@property(nonatomic, assign)int uid;
+> 		@property(nonatomic, strong)NSString* name;
+> 		@property(nonatomic, strong)NSArray* members;
+> 
+> <b>Band.m</b>
+> 
+	-(void)fromValues:(NSArray*)tsv {
+		self.uid = [[tsv objectAtIndex:0] intValue];
+		self.name = [tsv objectAtIndex:1];
+		self.members = [[tsv objectAtIndex:2] componentsSeparatedByString:@","];
+	}
+> 
+> <b>"data.tsv"</b>
 > <table>
 >     <tr>
 >         <td>1</td>
@@ -35,11 +46,8 @@ iOSUtil
 >     </tr>
 > </table>
 > 
-> <b>Code:</b> Creates an array of Band objects from the file above:
 > 
->     NSArray* bands = [DelimitedFileDelimitedFile loadTSV:@"data.tsv" toClass:[Band class]];
-> 
-> Similarly, you can do the same with comma separated (CSV) files (see sample project). Adding one method will allow use of any delimiter.
+> Full implementation in sample project. Similarly, you can do the same with comma separated (CSV) files (see sample project). Adding one method will allow use of any delimiter.
 
 <h2><b>EmailController</b></h2> 
 > <b>Note:</b> Requires MessageUI.framework
