@@ -2,7 +2,7 @@ iOSUtil
 =======
 	 • CaptureView - creates a PDF or UIImage screenshot from a UIView.
 	 • DelimitedFile - creates an array of user defined objects from a tab or comma separated file.
-	 • EmailController - a simple way to end email from a UIViewController.
+	 • EmailController - a simple way to send email from a UIViewController.
 
 <h2><b>CaptureView</b></h2> 
 > 
@@ -58,7 +58,7 @@ iOSUtil
 > 
 > See ViewController.m in sample project for examples. The reference to emailController must be retained for the life span of the email composer.
 > 
-> <b>Properties</b>
+> <b>Optional Properties</b>
 > <table>
 >     <tr>
 >         <td>NSData* attachment</td>
@@ -85,11 +85,11 @@ iOSUtil
 >         <td>The name of the attachment, this is visible to the user.</td>
 >     </tr>
 >     <tr>
->         <td>isHTML</td>
+>         <td>BOOL isHTML</td>
 >         <td>Defaults to YES. Treat body as HTML.</td>
 >     </tr>
 >     <tr>
->         <td>logResult</td>
+>         <td>BOOL logResult</td>
 >         <td>Send log info to console.</td>
 >     </tr>
 > </table>
