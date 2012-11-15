@@ -44,7 +44,11 @@ iOSUtil
 <h2><b>EmailController</b></h2> 
 > <b>Note:</b> Requires MessageUI.framework
 
-> <b>Example:</b> The snippet below emails a screenshot of the current UIViewController
+> <b>Example 1:</b> The snippet below displays Apple's mail composer
+> 
+>     [emailController sendEmail:self];
+> 
+> <b>Example 2:</b> The snippet below emails a screenshot of the current UIViewController
 > 
 >     UIImage* screenshotImage = [CaptureView viewToImage:self.view];
 >     emailController = [[EmailController alloc] init];
