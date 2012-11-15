@@ -6,9 +6,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSArray* bands = [DelimitedFile loadTSV:@"data.tsv" toClass:[Band class]];
+    NSArray* bands = [DelimitedFile load:@"data.tsv" toClass:[Band class] delimeter:kTabDelimeter];
     NSLog(@"%@", [bands description]);
-    NSArray* states = [DelimitedFile loadCSV:@"data.csv" toClass:[State class]];
+    NSArray* states = [DelimitedFile load:@"data.csv" toClass:[State class] delimeter:kCommaDelimeter];
     NSLog(@"%@", [states description]);
     return YES;
 }

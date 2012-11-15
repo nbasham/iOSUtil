@@ -1,7 +1,7 @@
 iOSUtil
 =======
 	 • CaptureView - creates a PDF or UIImage screenshot from a UIView.
-	 • DelimitedFile - creates an array of user defined objects from a tab or comma separated file.
+	 • DelimitedFile - creates an array of user defined objects from a delimited file.
 	 • EmailController - a simple way to send email from a UIViewController.
 
 <h2><b>CaptureView</b></h2> 
@@ -15,11 +15,11 @@ iOSUtil
 
 > <b>Example:</b> Creates an array of user defined objects populated with a tab separated file, in this example Band objects are created from file "data.tsv":
 > 
->     NSArray* bands = [DelimitedFileDelimitedFile loadTSV:@"data.tsv" toClass:[Band class]];
+>     NSArray* bands = [DelimitedFile load:@"data.tsv" toClass:[Band class] delimeter:kTabDelimeter];
 > 
 > <b>Band.h</b>
 
-> 		@interface Band : NSObject<TabSeparatedFileDelegate>
+> 		@interface Band : NSObject<DelimitedFileDelegate>
 > 		@property(nonatomic, assign)int uid;
 > 		@property(nonatomic, strong)NSString* name;
 > 		@property(nonatomic, strong)NSArray* members;
@@ -47,7 +47,7 @@ iOSUtil
 > </table>
 > 
 > 
-> Full implementation in sample project. Similarly, you can do the same with comma separated (CSV) files (see sample project). Adding one method will allow use of any delimiter.
+> Full implementation in sample project. Similarly, you can do the same with any delimiter e.g. comma separated (CSV) files (see sample project). Is there a real world case where using an NSCharacterSet would be better than a char delimiter?
 
 <h2><b>EmailController</b></h2> 
 > <b>Note:</b> Requires MessageUI.framework

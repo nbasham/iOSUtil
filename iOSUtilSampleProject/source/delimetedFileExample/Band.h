@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "DelimitedFile.h"
 
-@interface Band : NSObject<TabSeparatedFileDelegate>
+@interface Band : NSObject<DelimitedFileDelegate>
 
 @property(nonatomic, assign)int uid;
 @property(nonatomic, strong)NSString* name;

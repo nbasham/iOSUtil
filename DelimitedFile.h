@@ -15,19 +15,15 @@
 //
 #import <Foundation/Foundation.h>
 
-@protocol AbstractDelimitedFileDelegate <NSObject>
+#define kTabDelimeter '\t'
+#define kCommaDelimeter ','
+
+@protocol DelimitedFileDelegate <NSObject>
 -(id)fromValues:(NSArray*)tsv;
-@end
-
-@protocol TabSeparatedFileDelegate <AbstractDelimitedFileDelegate>
-@end
-
-@protocol CommaSeparatedFileDelegate <AbstractDelimitedFileDelegate>
 @end
 
 @interface DelimitedFile : NSObject
 
-+(NSArray*)loadCSV:(NSString*)fileName toClass:(Class)c;
-+(NSArray*)loadTSV:(NSString*)fileName toClass:(Class)c;
++(NSArray*)load:(NSString*)fileName toClass:(Class)c delimeter:(char)delimeter;
 
 @end
