@@ -5,6 +5,14 @@
 
 @implementation AppDelegate
 
+- (void)applicationWillResignActive:(UIApplication *)application {}
+- (void)applicationDidEnterBackground:(UIApplication *)application {}
+- (void)applicationWillEnterForeground:(UIApplication *)application {}
+- (void)applicationDidBecomeActive:(UIApplication *)application {}
+- (void)applicationWillTerminate:(UIApplication *)application {}
+
+#pragma mark - DelimitedFile
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSArray* bands = [DelimitedFile load:@"data.tsv" toClass:[Band class] delimeter:kTabDelimeter];
     NSLog(@"%@", [bands description]);
@@ -13,19 +21,4 @@
     return YES;
 }
 							
-- (void)applicationWillResignActive:(UIApplication *)application {
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-}
-
 @end

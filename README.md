@@ -4,6 +4,7 @@ iOSUtil
 		<li>CaptureView - creates a PDF or UIImage screenshot from a UIView.</li>
 		<li>DelimitedFile - creates an array of user defined objects from a delimited file.</li>
 		<li>EmailController - a simple way to send email from a UIViewController.</li>
+		<li>ShareController - a simple way to share items via Facebook, Twitter, Weibo, Message, Mail, Print, Copy to Pasteboard, Assign to Contacts, and Save to Camera Roll.</li>
 </ul>
 
 <h2><b>CaptureView</b></h2> 
@@ -66,13 +67,13 @@ iOSUtil
 >     emailController = [[EmailController alloc] init];
 >     [emailController sendEmail:self];
 > 
-> <b>Example 2:</b> The snippet below emails a screenshot of the current UIViewController
+> <b>Example 2:</b> The snippet below emails a screenshot of the current UIViewController with an HTML body.
 > 
 >     emailController = [[EmailController alloc] init];
 >     emailController.attachmentName = @"screenshot.png";
 >     emailController.subject = @"Image example";
->     emailController.isHTML = NO;
->     emailController.body = @"Enclosed is an image.";
+>     emailController.isHTML = YES;
+>     emailController.body = @"Enclosed is an <b>image</b>.";
 >     UIImage* screenshotImage = [CaptureView viewToImage:self.view];
 >     [emailController attachImage:screenshotImage];
 >     [emailController addRecipient:@"steve@mac.com"];
@@ -115,3 +116,23 @@ iOSUtil
 >         <td>Send log info to console.</td>
 >     </tr>
 > </table>
+
+<h2><b>ShareController</b></h2> 
+
+> <b>Note:</b> Requires Social.framework linked as 'optional'. Requires iOS 6, previous iOS versions display an alert.
+
+> <b>Example 1:</b> The snippet below displays an image Apple's share panel
+> 
+>     NSArray* items = @[@"ShareController example", [UIImage imageNamed:@"crazyHorse.png"]];
+>     [ShareController showFromParent:self items:items];
+> 
+> <b>Example 2:</b> The snippet below displays an image Apple's share panel without the UIActivityTypeCopyToPasteboard service. It also demonstrates using a callback.
+> 
+>     NSArray* excludes = @[UIActivityTypeCopyToPasteboard];
+>     [ShareController showFromParent:self items:items excludes:excludes callback:^(NSString* activityType, BOOL performedService) {
+>         if(activityType == nil) {
+>             NSLog(@"%@", @"Share panel was dismissed by user.");
+>         } else {
+>             NSLog(@"%@ was %@.", activityType, performedService ? @"performed" : @"cancelled");
+>         }
+>     }];

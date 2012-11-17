@@ -4,3 +4,5 @@ The iOSUtil project shows simple examples of each of the utilities. The project 
 > DelimitedFile see AppDelegate.m
 
 > EmailController see ViewController.m
+
+> ShareController see ViewController.m

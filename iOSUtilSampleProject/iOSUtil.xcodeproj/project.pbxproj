@@ -13,6 +13,8 @@
 		5785D5D716554113003CB0E9 /* CaptureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5D616554113003CB0E9 /* CaptureView.m */; };
 		5785D5DA1655413F003CB0E9 /* EmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D5D91655413F003CB0E9 /* EmailController.m */; };
 		5785D5DC1655427C003CB0E9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5785D5DB1655427C003CB0E9 /* MessageUI.framework */; };
+		5785D8271657F806003CB0E9 /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5785D8261657F806003CB0E9 /* ShareController.m */; };
+		5785D8291657F812003CB0E9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5785D8281657F812003CB0E9 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		57C4913E16532184004BCFA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913D16532184004BCFA7 /* UIKit.framework */; };
 		57C4914016532184004BCFA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4913F16532184004BCFA7 /* Foundation.framework */; };
 		57C4914216532184004BCFA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C4914116532184004BCFA7 /* CoreGraphics.framework */; };
@@ -41,6 +43,9 @@
 		5785D5D81655413F003CB0E9 /* EmailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailController.h; path = ../../EmailController.h; sourceTree = "<group>"; };
 		5785D5D91655413F003CB0E9 /* EmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailController.m; path = ../../EmailController.m; sourceTree = "<group>"; };
 		5785D5DB1655427C003CB0E9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5785D8251657F806003CB0E9 /* ShareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareController.h; path = ../../ShareController.h; sourceTree = "<group>"; };
+		5785D8261657F806003CB0E9 /* ShareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareController.m; path = ../../ShareController.m; sourceTree = "<group>"; };
+		5785D8281657F812003CB0E9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		57C4913916532184004BCFA7 /* iOSUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C4913D16532184004BCFA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57C4913F16532184004BCFA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +80,7 @@
 				57C4913E16532184004BCFA7 /* UIKit.framework in Frameworks */,
 				57C4914016532184004BCFA7 /* Foundation.framework in Frameworks */,
 				57C4914216532184004BCFA7 /* CoreGraphics.framework in Frameworks */,
+				5785D8291657F812003CB0E9 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +115,15 @@
 			path = ../images;
 			sourceTree = "<group>";
 		};
+		5785D8231657F7EB003CB0E9 /* shareController */ = {
+			isa = PBXGroup;
+			children = (
+				5785D8251657F806003CB0E9 /* ShareController.h */,
+				5785D8261657F806003CB0E9 /* ShareController.m */,
+			);
+			name = shareController;
+			sourceTree = "<group>";
+		};
 		57C4912E16532184004BCFA7 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +145,7 @@
 		57C4913C16532184004BCFA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5785D8281657F812003CB0E9 /* Social.framework */,
 				57C4913D16532184004BCFA7 /* UIKit.framework */,
 				57C4913F16532184004BCFA7 /* Foundation.framework */,
 				57C4914116532184004BCFA7 /* CoreGraphics.framework */,
@@ -153,6 +169,7 @@
 				5785D5D4165540D9003CB0E9 /* captureView */,
 				57C491A016532C68004BCFA7 /* delimetedFileExample */,
 				5785D5D3165540BA003CB0E9 /* emailExample */,
+				5785D8231657F7EB003CB0E9 /* shareController */,
 				57C4916416532264004BCFA7 /* AppDelegate.h */,
 				57C4916516532264004BCFA7 /* AppDelegate.m */,
 				57C4916616532264004BCFA7 /* iOSUtil-Prefix.pch */,
@@ -271,6 +288,7 @@
 				5785D5C0165419F3003CB0E9 /* DelimitedFile.m in Sources */,
 				5785D5D716554113003CB0E9 /* CaptureView.m in Sources */,
 				5785D5DA1655413F003CB0E9 /* EmailController.m in Sources */,
+				5785D8271657F806003CB0E9 /* ShareController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
