@@ -1,3 +1,7 @@
+//
+//    Copyright (c) 2012 Norman Basham
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
 #import <Foundation/Foundation.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>

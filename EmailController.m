@@ -1,3 +1,7 @@
+//
+//    Copyright (c) 2012 Norman Basham
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
 #import "EmailController.h"
 #import <QuartzCore/QuartzCore.h>
 
