@@ -121,15 +121,16 @@ iOSUtil
 
 > <b>Note:</b> Requires Social.framework linked as 'optional'. Requires iOS 6, previous iOS versions display an alert.
 
-> <b>Example 1:</b> The snippet below displays an image Apple's share panel
+> <b>Example 1:</b> The snippet below displays an image via Apple's share panel.
 > 
 >     NSArray* items = @[@"ShareController example", [UIImage imageNamed:@"crazyHorse.png"]];
 >     [ShareController showFromParent:self items:items];
 > 
-> <b>Example 2:</b> The snippet below displays an image Apple's share panel without the UIActivityTypeCopyToPasteboard service. It also demonstrates using a callback.
+> <b>Example 2:</b> The snippet below displays an image via Apple's share panel excluding the 'Copy To Pasteboard' service. It also demonstrates using a callback.
 > 
->     NSArray* excludes = @[UIActivityTypeCopyToPasteboard];
->     [ShareController showFromParent:self items:items excludes:excludes callback:^(NSString* activityType, BOOL performedService) {
+> 		NSArray* items = @[@"ShareController example", [UIImage imageNamed:@"theBand.jpg"]];  
+> 		NSArray* excludes = @[UIActivityTypeCopyToPasteboard];
+>     	[ShareController showFromParent:self items:items excludes:excludes callback:^(NSString* activityType, BOOL performedService) {
 >         if(activityType == nil) {
 >             NSLog(@"%@", @"Share panel was dismissed by user.");
 >         } else {
