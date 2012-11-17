@@ -119,7 +119,7 @@ iOSUtil
 
 <h2><b>ShareController</b></h2> 
 
-<p align=center><image width=164 height=206 src='./shots/share.png' /></p>
+<p align=center><img width=164 height=206 src='shots/share.png' /></p>
 > <b>Note:</b> Requires Social.framework linked as 'optional'. Requires iOS 6, previous iOS versions display an alert.
 
 > <b>Example 1:</b> The snippet below displays an image via Apple's share panel.
