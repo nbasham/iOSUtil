@@ -8,7 +8,7 @@
 #define kCommaDelimeter ','
 
 @protocol DelimitedFileDelegate <NSObject>
--(void)fromValues:(NSArray*)tsv;
+-(void)fromValues:(NSArray*)values;
 @end
 
 @interface DelimitedFile : NSObject
