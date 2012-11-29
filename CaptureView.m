@@ -7,6 +7,7 @@
 
 @implementation CaptureView
 
+//  NB: this implementation uses the CPU not GPU
 +(UIImage*)viewToImage:(UIView*)v {
     CGFloat deviceMainScreenScale = 0.0;
     BOOL optimizationExcludeAlpha = NO;
