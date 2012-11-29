@@ -106,6 +106,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="emailPdfTouch:"/>
+                <relationship kind="action" name="emailScreenshotTouch:"/>
+                <relationship kind="action" name="shareCrazyHorseTouch:"/>
                 <relationship kind="action" name="shareTheBandTouch:"/>
             </relationships>
         </class>
