@@ -8,7 +8,9 @@ iOSUtil
 </ul>
 
 <h2><b>CaptureView</b></h2> 
-> 
+
+> <b>Note:</b> This implementation uses the CPU not GPU, and assumes the scale of the screen.
+
 >     NSData* pdfData = [CaptureView viewToPdf:self.view];
 >     UIImage* screenshotImage = [CaptureView viewToImage:self.view];
 > 
