@@ -4,6 +4,7 @@ iOSUtil
 		<li>CaptureView - creates a PDF or UIImage screenshot from a UIView.</li>
 		<li>DelimitedFile - creates an array of user defined objects from a delimited file.</li>
 		<li>EmailController - a simple way to send email from a UIViewController.</li>
+		<li>NSArray+Primitive - a convenient way to use NSArray with primitive types.</li>
 		<li>ShareController - a simple way to share items via Facebook, Twitter, Weibo, Message, Mail, Print, Copy to Pasteboard, Assign to Contacts, and Save to Camera Roll.</li>
 </ul>
 
@@ -118,6 +119,32 @@ iOSUtil
 >         <td>Send log info to console.</td>
 >     </tr>
 > </table>
+
+<h2><b>NSArray+Primitive</b></h2> 
+
+<b>Notes:</b><br/>
+- <code>#import "NSArray+Primitive.h"</code> before using.<br/>
+- These arrays support serialization via <code>NSCoding</code>.<br/>
+- Current support for <code>BOOL</code>, <code>char</code>, <code>int</code> and <code>float</code> but very easy to extend to any type (see NSNumber).
+
+> <b>Example 1:</b> Creating a char NSArray.
+> 
+    NSMutableArray* charArray = [NSMutableArray array];
+    for (char c = 'a'; c <= 'z'; c++) {
+        [charArray addChar:c];
+    }
+> <b>Example 2:</b> Inserting and replacing a char NSArray.
+> 
+    NSLog(@"%c", [charArray charAtIndex:13]); // prints 'n'
+    NSMutableArray* charArray = [NSMutableArray array];
+    for (char c = 'a'; c <= 'z'; c++) {
+        [charArray addChar:c];
+    }
+    [charArray insertChar:'3' atIndex:3];
+    [charArray replaceCharAtIndex:13 withChar:'N'];
+    NSLog(@"%c", [charArray charAtIndex:0]);   //  prints a
+    NSLog(@"%c", [charArray charAtIndex:3]);   //  prints 3
+    NSLog(@"%c", [charArray charAtIndex:13]);   //  prints N
 
 <h2><b>ShareController</b></h2> 
 
